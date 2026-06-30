@@ -1,7 +1,8 @@
 const storeConfig = {
   brand: "AGD Cerâmica",
   whatsappNumber: "5548999938223",
-  storeEmail: "aracellighedin@gmail.com"
+  storeEmail: "aracellighedin@gmail.com",
+  orderEndpoint: "https://script.google.com/macros/s/AKfycbwPNWXaH6Sj_LqwuW5HWCLzhmSOGgqUQo2k4PAQa3rL6lLKn0n9sn68fk2KGDw-NC4Z7Q/exec"
 };
 
 const products = [
@@ -115,7 +116,43 @@ function buildOrderMessage(formData) {
   ].join("\n");
 }
 
-function openPreparedMessage(message) {
+function getOrderPayload(formData, message) {
+  const lines = getCartLines();
+  const total = lines.reduce((sum, item) => sum + item.subtotal, 0);
+  const orderId = `AGD-${new Date().toISOString().replace(/\D/g, "").slice(0, 14)}`;
+
+  return {
+    orderId,
+    name: formData.get("name") || "",
+    phone: formData.get("phone") || "",
+    email: formData.get("email") || "",
+    city: formData.get("city") || "",
+    zip: formData.get("zip") || "",
+    notes: formData.get("notes") || "",
+    items: lines.map((item) => `${item.quantity}x ${item.name}`).join(", "),
+    total: String(total),
+    message
+  };
+}
+
+async function submitOrderCopy(payload) {
+  if (!storeConfig.orderEndpoint) {
+    return { ok: false, skipped: true };
+  }
+
+  await fetch(storeConfig.orderEndpoint, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+    },
+    body: new URLSearchParams(payload)
+  });
+
+  return { ok: true };
+}
+
+async function openPreparedMessage(message, payload) {
   preparedMessage.value = message;
 
   if (storeConfig.whatsappNumber) {
@@ -123,11 +160,10 @@ function openPreparedMessage(message) {
     window.open(url, "_blank", "noopener");
   }
 
-  const formData = new FormData(orderForm);
-  if (storeConfig.storeEmail) {
-    const subject = `Cópia do pedido - ${storeConfig.brand}`;
-    const mailtoUrl = `mailto:${storeConfig.storeEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    window.open(mailtoUrl, "_blank", "noopener");
+  try {
+    await submitOrderCopy(payload);
+  } catch (error) {
+    console.error("Não foi possível enviar a cópia automática do pedido.", error);
   }
 
   dialog.showModal();
@@ -162,7 +198,8 @@ orderForm.addEventListener("submit", (event) => {
 
   const formData = new FormData(orderForm);
   const message = buildOrderMessage(formData);
-  openPreparedMessage(message);
+  const payload = getOrderPayload(formData, message);
+  openPreparedMessage(message, payload);
 });
 
 copyMessage.addEventListener("click", async () => {
