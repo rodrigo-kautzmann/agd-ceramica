@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGD Cerâmica</title>
+    <meta
+      name="description"
+      content="Cerâmicas artesanais em pequenas tiragens. Peças para mesa, café e casa feitas uma a uma."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AGD Cerâmica">
+        <img src="assets/logo-agd.jpg" alt="" class="brand-mark">
+        <span>AGD Cerâmica</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#colecao">Coleção</a>
+        <a href="#pedido">Pedido</a>
+        <a href="#atendimento">Atendimento</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img src="assets/conjunto-verde-petroleo.jpg" alt="Conjunto de cerâmica artesanal verde petróleo com xícara, pires, prato e bowl.">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Cerâmica artesanal em pequenas tiragens</p>
+          <h1 id="hero-title">Peças de mesa feitas uma a uma.</h1>
+          <p>
+            AGD começa com uma coleção enxuta de cerâmicas autorais para café, almoço leve e rituais de casa.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#colecao">Ver produtos</a>
+            <a class="button secondary" href="#pedido">Fazer pedido</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Resumo da loja">
+        <div>
+          <strong>Pronta para começar simples.</strong>
+          <span>Pedidos por formulário, disponibilidade e frete combinados antes do pagamento.</span>
+        </div>
+        <div>
+          <strong>Produção artesanal.</strong>
+          <span>Variações de cor, esmalte e formato fazem parte de cada peça.</span>
+        </div>
+      </section>
+
+      <section class="section" id="colecao" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <p class="eyebrow">Primeira coleção</p>
+          <h2 id="collection-title">Produtos disponíveis</h2>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section order-section" id="pedido" aria-labelledby="order-title">
+        <div class="order-copy">
+          <p class="eyebrow">Pedido inicial</p>
+          <h2 id="order-title">Monte o pedido e envie para confirmação.</h2>
+          <p>
+            O formulário prepara uma mensagem com os itens, contato e endereço. A confirmação final inclui disponibilidade, prazo e frete.
+          </p>
+          <dl class="checkout-notes">
+            <div>
+              <dt>Pagamento</dt>
+              <dd>Informado depois da confirmação de disponibilidade e frete.</dd>
+            </div>
+            <div>
+              <dt>Frete</dt>
+              <dd>Calculado manualmente nesta primeira versão.</dd>
+            </div>
+            <div>
+              <dt>Retirada</dt>
+              <dd>Disponível mediante combinação.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form class="order-form" id="orderForm">
+          <label>
+            Nome
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            WhatsApp
+            <input name="phone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+          </label>
+          <label>
+            E-mail
+            <input name="email" autocomplete="email" inputmode="email" type="email" placeholder="nome@email.com">
+          </label>
+          <label>
+            Cidade e UF
+            <input name="city" autocomplete="address-level2" placeholder="Florianópolis, SC" required>
+          </label>
+          <label>
+            CEP para frete
+            <input name="zip" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" required>
+          </label>
+          <label>
+            Mensagem
+            <textarea name="notes" rows="4" placeholder="Ex.: quero presentear, preciso de nota, preferência de retirada..."></textarea>
+          </label>
+
+          <div class="cart-summary">
+            <div>
+              <span>Itens selecionados</span>
+              <strong id="cartTotal">R$ 0</strong>
+            </div>
+            <p id="cartItems">Escolha um produto na coleção.</p>
+          </div>
+
+          <button class="button primary full" type="submit">Preparar pedido</button>
+          <p class="form-footnote">
+            A mensagem abre no WhatsApp com os dados do pedido e uma cópia por e-mail é preparada para a Aracelli.
+          </p>
+        </form>
+      </section>
+
+      <section class="section service-section" id="atendimento" aria-labelledby="service-title">
+        <div>
+          <p class="eyebrow">Atendimento</p>
+          <h2 id="service-title">Como comprar nesta fase</h2>
+        </div>
+        <ol class="steps">
+          <li>Escolha as peças disponíveis.</li>
+          <li>Envie seus dados para confirmar estoque, prazo e frete.</li>
+          <li>Receba as instruções de pagamento após a confirmação.</li>
+          <li>Receba em casa ou combine retirada.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AGD Cerâmica</span>
+      <span>Peças artesanais para mesa e casa.</span>
+    </footer>
+
+    <dialog class="message-dialog" id="messageDialog">
+      <form method="dialog">
+        <h2>Pedido pronto</h2>
+        <p>Copie a mensagem abaixo para enviar pelo canal de atendimento da AGD.</p>
+        <textarea id="preparedMessage" rows="9" readonly></textarea>
+        <div class="dialog-actions">
+          <button class="button secondary" value="cancel">Fechar</button>
+          <button class="button primary" id="copyMessage" type="button">Copiar mensagem</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
