@@ -4,6 +4,13 @@
 
 Começar com R$ 20 a R$ 40 por dia por 7 dias, direcionando para WhatsApp ou para `https://agdceramics.com/#pedido`.
 
+## Conta da marca
+
+- Email: `agdceramics@gmail.com`
+- Site: `https://agdceramics.com/`
+- Instagram: `https://www.instagram.com/agdceramics/`
+- WhatsApp: `https://wa.me/5548999938223`
+
 ## Texto 1
 
 Cerâmicas feitas à mão em pequenas séries.
