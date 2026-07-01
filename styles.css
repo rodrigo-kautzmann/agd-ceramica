@@ -159,6 +159,25 @@ h3 {
   margin-top: 30px;
 }
 
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+}
+
+.hero-proof li {
+  padding: 8px 10px;
+  border: 1px solid #cad5cc;
+  border-radius: var(--radius);
+  color: #394b42;
+  background: rgba(255, 255, 255, 0.76);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -215,6 +234,27 @@ h3 {
 .intro-band span {
   color: #4f5b52;
   line-height: 1.5;
+}
+
+.campaign-band {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.15fr) auto;
+  align-items: center;
+  gap: clamp(22px, 4vw, 48px);
+  padding: clamp(34px, 5vw, 58px) clamp(18px, 4vw, 56px);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.campaign-band h2 {
+  max-width: 9ch;
+  font-size: clamp(2rem, 3.3vw, 3.6rem);
+}
+
+.campaign-band p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .section {
@@ -508,7 +548,8 @@ textarea:focus {
 @media (max-width: 920px) {
   .hero,
   .order-section,
-  .service-section {
+  .service-section,
+  .campaign-band {
     grid-template-columns: 1fr;
   }
 
