@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260701-social">
+    <link rel="stylesheet" href="styles.css?v=20260701-rich">
   </head>
   <body>
     <header class="site-header">
@@ -31,6 +31,7 @@
       </a>
       <nav class="main-nav" aria-label="Navegação principal">
         <a href="#colecao">Coleção</a>
+        <a href="#processo">Processo</a>
         <a href="#pedido">Pedido</a>
         <a href="#atendimento">Atendimento</a>
         <a href="https://www.instagram.com/agdceramics/" target="_blank" rel="noopener">Instagram</a>
@@ -71,6 +72,32 @@
         </div>
       </section>
 
+      <section class="section editorial-section" aria-labelledby="editorial-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Mesa, café e casa</p>
+            <h2 id="editorial-title">Peças para usar, presentear e guardar.</h2>
+          </div>
+          <p>
+            A coleção mistura argila aparente, esmaltes naturais e pequenas variações de queima. Algumas peças estão prontas, outras podem entrar como encomenda.
+          </p>
+        </div>
+        <div class="editorial-grid">
+          <figure class="feature-tile wide">
+            <img src="assets/mesa-posta-dupla.jpg" alt="Pratos artesanais claros sobre mesa de madeira.">
+            <figcaption>Mesa posta em pequenas séries</figcaption>
+          </figure>
+          <figure class="feature-tile">
+            <img src="assets/copos-esmalte-claro.jpg" alt="Copos de cerâmica com argila aparente e esmalte claro.">
+            <figcaption>Copos com esmalte claro</figcaption>
+          </figure>
+          <figure class="feature-tile">
+            <img src="assets/caneca-verde-personalizada.jpg" alt="Caneca artesanal verde com iniciais gravadas.">
+            <figcaption>Peças personalizadas</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="campaign-band" aria-label="Primeira coleção AGD">
         <div>
           <p class="eyebrow">Lançamento</p>
@@ -84,10 +111,47 @@
 
       <section class="section" id="colecao" aria-labelledby="collection-title">
         <div class="section-heading">
-          <p class="eyebrow">Primeira coleção</p>
-          <h2 id="collection-title">Produtos disponíveis</h2>
+          <div>
+            <p class="eyebrow">Primeira coleção</p>
+            <h2 id="collection-title">Produtos disponíveis</h2>
+          </div>
+          <p>
+            Valores iniciais para começar a receber pedidos. A disponibilidade de cada peça, prazo de produção e frete são confirmados pelo WhatsApp.
+          </p>
         </div>
         <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section process-section" id="processo" aria-labelledby="process-title">
+        <div class="process-copy">
+          <p class="eyebrow">Processo</p>
+          <h2 id="process-title">Do torno à mesa.</h2>
+          <p>
+            Cada forma começa no gesto, na argila e no tempo. Depois vêm secagem, acabamento, queima e esmalte. O resultado nunca é industrial: as marcas do processo fazem parte da peça.
+          </p>
+        </div>
+        <div class="process-gallery" aria-label="Fotos do processo e assinatura">
+          <figure>
+            <img src="assets/processo-torno.jpg" alt="Peça de cerâmica sendo feita no torno.">
+            <figcaption>Forma no torno</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/assinatura-peca.jpg" alt="Assinatura AGD no fundo de uma peça de cerâmica.">
+            <figcaption>Assinatura no fundo da peça</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="personal-section" aria-labelledby="personal-title">
+        <img src="assets/caneca-crua-personalizada.jpg" alt="Caneca de cerâmica crua personalizada com nome.">
+        <div>
+          <p class="eyebrow">Encomendas</p>
+          <h2 id="personal-title">Peças com nome, marca ou intenção.</h2>
+          <p>
+            Personalizações podem ser avaliadas caso a caso para presentes, pequenas marcas e ocasiões especiais. Nesta fase, tudo é combinado antes: desenho, prazo, quantidade e valor.
+          </p>
+          <a class="button secondary" href="#pedido">Consultar encomenda</a>
+        </div>
       </section>
 
       <section class="section order-section" id="pedido" aria-labelledby="order-title">
@@ -188,6 +252,6 @@
       </form>
     </dialog>
 
-    <script src="app.js?v=20260630-orders"></script>
+    <script src="app.js?v=20260701-rich"></script>
   </body>
 </html>

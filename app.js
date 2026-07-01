@@ -14,6 +14,42 @@ const products = [
     description:
       "Kit artesanal com xícara, pires, prato baixo e bowl. Esmalte verde petróleo com base em argila aparente.",
     tags: ["4 peças", "Pequena tiragem", "R$ 248 o conjunto"]
+  },
+  {
+    id: "dupla-mesa-posta",
+    name: "Dupla mesa posta",
+    price: 198,
+    image: "assets/mesa-posta-dupla.jpg",
+    description:
+      "Par de pratos orgânicos com molheira pequena. Peças claras para entradas, sushi, petiscos e mesa compartilhada.",
+    tags: ["3 peças", "Mesa posta", "R$ 198 o par"]
+  },
+  {
+    id: "copo-esmalte-claro",
+    name: "Copo esmalte claro",
+    price: 72,
+    image: "assets/copos-esmalte-claro.jpg",
+    description:
+      "Copo baixo com argila aparente e esmalte claro pontilhado. Ideal para água, café longo, chá ou sobremesa.",
+    tags: ["Unidade", "Pequena série", "R$ 72 cada"]
+  },
+  {
+    id: "caneca-verde-personalizada",
+    name: "Caneca verde personalizada",
+    price: 118,
+    image: "assets/caneca-verde-personalizada.jpg",
+    description:
+      "Caneca com esmalte verde, textura natural e iniciais gravadas. Boa opção para presente ou encomenda especial.",
+    tags: ["Personalizável", "Sob consulta", "A partir de R$ 118"]
+  },
+  {
+    id: "caneca-crua-personalizada",
+    name: "Caneca crua personalizada",
+    price: 96,
+    image: "assets/caneca-crua-personalizada.jpg",
+    description:
+      "Caneca em acabamento cru, com nome gravado e superfície texturizada. Produção combinada por encomenda.",
+    tags: ["Personalizável", "Encomenda", "A partir de R$ 96"]
   }
 ];
 
