@@ -47,3 +47,25 @@ Brasil, 25 a 55 anos. Interesses: decoração, casa, cerâmica, mesa posta, caf�
 - Foto principal do conjunto completo.
 - Vídeo curto mostrando brilho, textura e proporção das peças.
 - Foto das peças em uso com café, guardanapo ou mesa posta simples.
+- Foto de mesa posta com pratos e bowls.
+- Foto do processo no torno para reforçar que é feito à mão.
+- Foto da assinatura no fundo da peça para reforçar identidade.
+
+## Banco de imagens
+
+Material salvo em `campaign/source-photos/`.
+
+Boas para posts e anúncios agora:
+
+- `mesa-sushi-duplas.jpg`
+- `copos-brancos-lote.jpg`
+- `caneca-verde-pi.jpg`
+- `caneca-crua-tici.jpg`
+- `processo-torno.jpg`
+- `marca-fundo-peca.jpg`
+- `peca-personalizada-oralsh.jpg`
+
+Melhores como referência, não como anúncio principal:
+
+- `xicaras-brancas-baixa-res.jpg`
+- `canecas-azuis-baixa-res.jpg`
